@@ -57,11 +57,15 @@ Serive role must follow this syntax: arn:aws:iam::<ACCOUNT-ID>:role/<ROLE-NAME>
 ## CodePipeline
 
 Service role: Let AWS create a new one
+
 Source stage
-    - Source Provider: Github
-    - Repository: Dara433/simple-node-js-app
-    - branch: main
-    - change detection: start the pipeline on source changes
+
+- Source Provider: Github
+- Repository: Dara433/simple-node-js-app
+- branch: main
+- change detection: start the pipeline on source changes
+
+Specify artifact as s3 codepipeline-artifacts-01
 
 Build stage:
     specify CodeBuild project name 
@@ -70,22 +74,23 @@ Build stage:
 
 deploy stage: 
     specify CodeDeploy project name
-    use build artifact for deploy stage: received artifacts produced by CodeBuild,  
+    use build artifact for deploy stage: received artifacts produced by CodeBuild  
 
-Specify artifact as S3 codepipeline-artifacts-01
 
-Use build artifact for deploy s
 
-## EC2 instance
+
+ ### EC2 instance for CodeDeploy</u>
 
 Create an EC2 instance on AWS console 
 
-### Creating IAM role for EC2 for CodeDeploy
+<u>Creating IAM role for EC2 for CodeDeploy</u>
+
 Before launching the EC2 instance, you need an IAM role that allows the instance to talk to CodeDeploy
 
 Attach these policies
-- 	AmazonEC2RoleforAWSCodeDeploy
-• 	AmazonS3ReadOnlyAccess (needed for pulling artifacts)
+
+- AmazonEC2RoleforAWSCodeDeploy
+- AmazonS3ReadOnlyAccess (needed for pulling artifacts)
 
 name the role: EC2CodeDeployRole
 
@@ -113,6 +118,6 @@ Update `install_dependencies.sh` to include permssions to fix automatically (pre
 - Run Node app in background in script/start_server.sh keep process alive and avoid timeouts
 
 test your server on your local brower
-        http://<EC2-PUBLIC-IP>:3000
+        `http://<EC2-PUBLIC-IP>:3000`
 
 
