@@ -1,8 +1,7 @@
 {
-  "name": "Elastic-Beanstalk-Sample-App",
-  "version": "0.0.1",
-  "private": true,
-  "dependencies": {},
+  "name": "simple-node-app",
+  "version": "1.0.0",
+  "main": "app.js",
   "scripts": {
     "start": "node app.js"
   }
