@@ -79,7 +79,7 @@ deploy stage:
 
 
 
- ### EC2 instance for CodeDeploy</u>
+ ### EC2 instance for CodeDeploy
 
 Create an EC2 instance on AWS console 
 
@@ -99,6 +99,7 @@ name the role: EC2CodeDeployRole
 - Create a new security group: allowing SSH, HTTP, and custom TCP (3000) inbound traffic
 
 - Install CodeDeploy agent on your EC2 instance
+
             sudo yum update -y
             sudo yum install ruby -y
             sudo yum install wget -y
