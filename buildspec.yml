@@ -3,7 +3,7 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      nodejs: 25
+      nodejs: 18
     commands:
       - cd src
       - npm install

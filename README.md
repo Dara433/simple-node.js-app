@@ -113,6 +113,6 @@ Update `install_dependencies.sh` to include permssions to fix automatically (pre
 - Run Node app in background in script/start_server.sh keep process alive and avoid timeouts
 
 test your server on your local brower
-http://<EC2-PUBLIC-IP>:3000
+        http://<EC2-PUBLIC-IP>:3000
 
 
