@@ -1,3 +1,3 @@
 #!/bin/bash
-cd /var/www/simple-node-app
+cd /home/ec2-user/simple-node-app/src
 npm install
