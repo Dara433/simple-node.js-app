@@ -1,3 +1,3 @@
 #!/bin/bash
 cd /home/ec2-user/simple-node-app/src
-npm start
+nohup npm start > /dev/null 2>&1 &
