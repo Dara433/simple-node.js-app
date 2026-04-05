@@ -1,3 +1,3 @@
 #!/bin/bash
-cd /var/www/simple-node-app
-nohup node app.js > server.log 2>&1 &
+cd /home/ec2-user/simple-node-app/src
+npm start
